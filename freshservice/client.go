@@ -101,7 +101,7 @@ func responseOK(res *http.Response) error {
 	return fmt.Errorf("bad status: %v. %v (read error: %v)", res.Status, string(data), err)
 }
 
-//GetCredentials of fresh service client from enviroment varibles
+//GetCredentials of fresh service client from environment varibles
 func GetCredentials() (domain, apiKey string) {
 
 	domain = os.Getenv("FS_DOMIAN")
