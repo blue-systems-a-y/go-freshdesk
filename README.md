@@ -15,7 +15,7 @@ go-freshdesk is a client package written in go, used to ease the operations on F
 ## Table of Contents
 
 > Choose the section you are interested in
-
+- [Overview](##Overview)
 - [Prerequisites](##Prerequisites)
 - [Integration](##Integration)
 - [Example](##Example)
@@ -72,8 +72,8 @@ fc := freshservice.NewClient("DOMAIN_NAME", "API_KEY")
 
 ---
 
-## Example
-```javascript
+## Example 1
+```go
 // Create an asset
 c := NewClient(MY_DOMIN, MY_APIKEY)
 newAsset := &Asset{
@@ -83,7 +83,20 @@ newAsset := &Asset{
 res,err := c.CreateAsset(newAsset)
 ```
 ---
-
+## Example 2
+```go
+//List all tickets
+c := NewClient(MY_DOMIN, MY_APIKEY)
+tickets, err := c.ListAllTickets()
+for _, ticket := range tickets {
+    log.Printf("%+v", ticket)
+    }
+}
+``` 
 ## License
 
 - **[MIT license](http://opensource.org/licenses/mit-license.php)**
+
+## Authors
+
+* **Danny Tylman** - *Gabriel Systems* 
