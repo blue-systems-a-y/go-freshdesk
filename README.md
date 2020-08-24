@@ -33,11 +33,16 @@ To be able to use the client:
 
 - Import the package in your target project
 ```go
-import github.com/EDIT THIS
+import "github.com/blue-systems-a-y/go-freshdesk"
+```
+- Set the credentials environment variables 
+```go
+FS_DOMAIN 
+FS_KEY //api key
 ```
 - Create a freshdesk client
 ```go
-fc := freshservice.NewClient("DOMAIN_NAME", "API_KEY")
+fc := freshservice.NewClient(FS_DOMAIN, FS_KEY)
 ```
 ---
 

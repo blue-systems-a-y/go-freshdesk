@@ -7,6 +7,7 @@ import (
 	"io/ioutil"
 	"log"
 	"net/http"
+	"os"
 )
 
 //Client is the freshservice client
@@ -98,4 +99,13 @@ func responseOK(res *http.Response) error {
 
 	data, err := ioutil.ReadAll(res.Body)
 	return fmt.Errorf("bad status: %v. %v (read error: %v)", res.Status, string(data), err)
+}
+
+//GetCredentials of fresh service client from enviroment varibles
+func GetCredentials() (domain, apiKey string) {
+
+	domain = os.Getenv("FS_DOMIAN")
+	apiKey = os.Getenv("FS_KEY")
+
+	return domain, apiKey
 }
