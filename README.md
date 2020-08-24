@@ -10,6 +10,7 @@ go-freshdesk is a client package written in go, used to ease the operations on F
 **Badges**
 
 [![Build Status](http://img.shields.io/travis/badges/badgerbadgerbadger.svg?style=flat-square)](https://travis-ci.org/badges/badgerbadgerbadger)   [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
+[![Go Report Card](https://goreportcard.com/badge/github.com/kolide/fleet)](https://goreportcard.com/badge/github.com/blue-systems-a-y/go-freshdesk)
 ---
 
 ## Table of Contents
@@ -101,7 +102,3 @@ for _, ticket := range tickets {
 ## License
 
 - **[MIT license](http://opensource.org/licenses/mit-license.php)**
-
-## Authors
-
-* **Danny Tylman** - *Gabriel Systems* 
