@@ -28,7 +28,7 @@ func TestClient_GetAllAssets(t *testing.T) {
 	assert.NotEmpty(t, apiKey)
 
 	c := NewClient(domain, apiKey)
-	assets, err := c.ListAlAssets()
+	assets, err := c.ListAllAssets()
 	assert.NoError(t, err)
 	assert.NotEmpty(t, assets)
 }

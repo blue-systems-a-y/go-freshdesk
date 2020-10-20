@@ -17,12 +17,15 @@ type AssetList struct {
 
 //Asset ...
 type Asset struct {
-	ID        int    `json:"id,omitempty"`
-	DisplayID int    `json:"display_id,omitempty"`
-	Name      string `json:"name,omitempty"`
+	//ID Unique ID of the asset.
+	ID int `json:"id,omitempty"`
+	//DisplayID Display ID of the asset.
+	DisplayID int `json:"display_id,omitempty"`
+	//Name Name of the asset. Mandatory
+	Name string `json:"name,omitempty"`
 	//Description of the asset.
 	Description string `json:"description,omitempty"`
-	//ID of the asset type.
+	//ID of the asset type. Mandatory.
 	AssetTypeID int `json:"asset_type_id,omitempty"`
 	//Asset tag of the asset.
 	AssetTag string `json:"asset_tag,omitempty"`
@@ -59,8 +62,8 @@ func (c *Client) ListAssets(page int) ([]Asset, error) {
 	return list.Assets, err
 }
 
-//ListAlAssets ...
-func (c *Client) ListAlAssets() ([]Asset, error) {
+//ListAllAssets ...
+func (c *Client) ListAllAssets() ([]Asset, error) {
 	all := make([]Asset, 0)
 	i := 1
 	for true {

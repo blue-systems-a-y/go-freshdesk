@@ -36,6 +36,8 @@ type Ticket struct {
 	Tags []string `json:"tags,omitempty"`
 	//Category Tags that have been associated with the ticket.
 	Category string `json:"category,omitempty"`
+	//Assets List of assets associated with the ticket
+	Assets []Asset `json:"assets,omitempty"`
 }
 
 //TicketList holds a list of tickets

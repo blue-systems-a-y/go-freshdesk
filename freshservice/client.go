@@ -102,10 +102,10 @@ func responseOK(res *http.Response) error {
 }
 
 //GetCredentials of fresh service client from environment varibles
-func GetCredentials() (domain, apiKey string) {
+func GetCredentials() (string, string) {
 
-	domain = os.Getenv("FS_DOMIAN")
-	apiKey = os.Getenv("FS_KEY")
+	domain := os.Getenv("FS_DOMAIN")
+	apiKey := os.Getenv("FS_KEY")
 
 	return domain, apiKey
 }
