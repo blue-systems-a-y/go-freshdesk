@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-//Ticket ...
+//Ticket see here: https://api.freshservice.com/v2/#ticket_attributes
 type Ticket struct {
 	ID int `json:"id,omitempty"`
 	//Name of the requester
@@ -25,12 +25,17 @@ type Ticket struct {
 	//Description HTML content of the ticket.
 	Description string `json:"description,omitempty"`
 	//CCEmails Email address added in the 'cc' field of the incoming ticket email.
-	CCEmails     []string               `json:"cc_emails,omitempty"`
+	CCEmails []string `json:"cc_emails,omitempty"`
+	//CustomFields Key value pairs containing the names and values of custom fields.
 	CustomFields map[string]interface{} `json:"custom_fields,omitempty"`
-	DueBy        *time.Time             `json:"due_by,omitempty"`
-	Source       int                    `json:"source,omitempty"`
-	Tags         []string               `json:"tags,omitempty"`
-	Category     string                 `json:"category,omitempty"`
+	//DueBy Timestamp that denotes when the ticket is due to be resolved.
+	DueBy *time.Time `json:"due_by,omitempty"`
+	//Source The channel through which the ticket was created.
+	Source int `json:"source,omitempty"`
+	//Tags Tags that have been associated with the ticket.
+	Tags []string `json:"tags,omitempty"`
+	//Category Tags that have been associated with the ticket.
+	Category string `json:"category,omitempty"`
 }
 
 //TicketList holds a list of tickets
